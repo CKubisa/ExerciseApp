@@ -12,104 +12,27 @@
 <body>
     <div class="container">
 
-      <!-- NAVBAR START -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-              </a>
-          
-              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': navBarIsActive }" @click="navBarIsActive = !navBarIsActive" >
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
-            </div>
-          
-            <div class="navbar-menu" :class="{ 'is-active': navBarIsActive }">
-              <div class="navbar-start">
-                <a class="navbar-item">
-                  Home
-                </a>
-          
-                <a class="navbar-item">
-                    Report
-                </a>
-          
-                <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link">
-                    Types
-                  </a>
-          
-                  <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                      Endurance
-                    </a>
-                    <a class="navbar-item">
-                      Strength
-                    </a>
-                    <a class="navbar-item">
-                      Balance
-                    </a>
-                    
-                    <a class="navbar-item">
-                      Flexablity
-                    </a>
-                  </div>
-                </div>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                      Help
-                    </a>
-            
-                    <div class="navbar-dropdown">
-                      <a class="navbar-item">
-                        About
-                      </a>
-                      <a class="navbar-item">
-                        Contact
-                      </a>
-                    </div>
-                  </div>
-
-              </div>
-          
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-primary">
-                      <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                      Log in
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-          <!-- NAVBAR END -->
+      
 
         <h1 class="title">
-          Strength
+          Endurance
         </h1>
         <p class="subtitle">
           Track your fitness
         </p>
 
-        <article class="message is-danger">
+        <article class="message is-primary">
           <div class="message-header">
             <p > 
               <i class="fas fa-running"></i>
-              Strength
+              Endurance
             </p>
             <button class="delete" aria-label="delete"></button>
           </div>
           <div class="message-body">
             Progress This Week
             <br> 
-            <progress class="progress is-danger" value="15" max="100">15%</progress>
+            <progress class="progress is-primary" value="15" max="100">15%</progress>
             <button class="button is-light">More</button> 
           </div>
         </article>
@@ -148,10 +71,10 @@
               </div>
             <div class="message-body">
                 Enter Workout Name
-                <input class="input is-danger" type="text" placeholder="Name">
+                <input class="input is-primary" type="text" placeholder="Name">
                 <br>
                 Enter Workout Length
-                <input class="input is-danger" type="text" placeholder="Time">
+                <input class="input is-primary" type="text" placeholder="Time">
                 <br>
                 <button class="button">Submit</button> 
             </div>
@@ -163,35 +86,35 @@
 
           <ul class="steps is-balanced">
             <li class="steps-segment">
-              <span class="steps-marker is-danger"></span>
+              <span class="steps-marker"></span>
               <div class="steps-content">
                 <p class="is-size-4">Day 1</p>
                 <p>Workout Name</p>
               </div>
             </li>
             <li class="steps-segment">
-              <span class="steps-marker is-danger"></span>
+              <span class="steps-marker"></span>
               <div class="steps-content">
                 <p class="is-size-4">Day 2</p>
                 <p>Workout Name</p>
               </div>
             </li>
             <li class="steps-segment is-active">
-              <span class="steps-marker is-danger"></span>
+              <span class="steps-marker"></span>
               <div class="steps-content">
                 <p class="is-size-4">Day 3</p>
                 <p>Workout Name</p>
               </div>
             </li>
             <li class="steps-segment">
-              <span class="steps-marker is-danger"></span>
+              <span class="steps-marker"></span>
               <div class="steps-content">
                 <p class="is-size-4">Day 4</p>
                 <p>Workout Name</p>
               </div>
             </li>
             <li class="steps-segment">
-              <span class="steps-marker is-danger"></span>
+              <span class="steps-marker"></span>
               <div class="steps-content">
                 <p class="is-size-4">Day 5</p>
                 <p>Workout Name</p>

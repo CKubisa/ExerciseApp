@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/octoshrimpy/bulma-o-steps/master/bulma-steps.css">
     <title>No Framework</title>
 </head>
 <body>
@@ -15,8 +14,9 @@
       <!-- NAVBAR START -->
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+              <a class="navbar-item" href="./index.html">
+                <i class="fas fa-dumbbell"></i>
+                &nbsp App Name
               </a>
           
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': navBarIsActive }" @click="navBarIsActive = !navBarIsActive" >
@@ -28,32 +28,62 @@
           
             <div class="navbar-menu" :class="{ 'is-active': navBarIsActive }">
               <div class="navbar-start">
-                <a class="navbar-item">
-                  Home
+                <a class="navbar-item" href="./history.html">
+                  History
                 </a>
           
                 <a class="navbar-item">
-                    Report
+                  New Excerise
                 </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
-                    Types
+                    Reports
                   </a>
           
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsEndurance.html">
                       Endurance
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsStrength.html">
                       Strength
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsBalance.html">
                       Balance
                     </a>
                     
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsFlexablity.html">
                       Flexablity
+                    </a>
+                  </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    Friends
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="./friendsMine.html">
+                      My Friends
+                    </a>
+                    <a class="navbar-item" href="./friendsFind.html">
+                      Find Friends
+                    </a>
+                  </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    Activity
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="./activityMine.html">
+                      My Activity
+                    </a>
+                    <a class="navbar-item" href="./activityFriends.html">
+                      Friends Activity
                     </a>
                   </div>
                 </div>
@@ -64,10 +94,13 @@
                   </a>
           
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./login.html">
+                      Account
+                    </a>
+                    <a class="navbar-item" href="./helpAbout.html">
                       About
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./helpContact.html">
                       Contact
                     </a>
                   </div>
@@ -92,7 +125,7 @@
           <!-- NAVBAR END -->
 
         <h1 class="title">
-          Endurance
+          Excerise App
         </h1>
         <p class="subtitle">
           Track your fitness
@@ -114,92 +147,51 @@
           </div>
         </article>
 
-        <article class="message is-dark">
-            <div class="message-header">
-              <p>Premade Workout</p>
-              <button class="delete" aria-label="delete"></button>
-            </div>
-            <div class="message-body">
-                <aside class="menu">
-                    <p class="menu-label">
-                      Walking
-                    </p>
-                    <ul class="menu-list">
-                      <li><a>Walk 15 minutes</a></li>
-                      <li><a>Walk 30 minutes</a></li>
-                    </ul>
+        <article class="message is-danger">
+          <div class="message-header">
+            <p > 
+              <i class="fas fa-dumbbell"></i>
+              Strength
+            </p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            Progress This Week
+            <br> 
+            <progress class="progress is-danger" value="15" max="100">15%</progress>
+            <button class="button is-light">More</button> 
+          </div>
+        </article>
 
-                    <p class="menu-label">
-                        Running
-                      </p>
-                      <ul class="menu-list">
-                        <li><a>Running 15 minutes</a></li>
-                        <li><a>Running 30 minutes</a></li>
-                      </ul>
-                  </aside>
-            </div>
-          </article>
+        <article class="message is-warning">
+          <div class="message-header">
+            <p > 
+              <i class="fas fa-balance-scale"></i>
+              Balance
+            </p>
+          </div>
+          <div class="message-body">
+            Progress This Week
+            <br> 
+            <progress class="progress is-warning" value="15" max="100">15%</progress>
+            <button class="button is-light">More</button> 
+          </div>
+        </article>
 
-
-        <article class="message">
-            <div class="message-header">
-                <p>Custom Workout</p>
-                <button class="delete" aria-label="delete"></button>
-              </div>
-            <div class="message-body">
-                Enter Workout Name
-                <input class="input is-primary" type="text" placeholder="Name">
-                <br>
-                Enter Workout Length
-                <input class="input is-primary" type="text" placeholder="Time">
-                <br>
-                <button class="button">Submit</button> 
-            </div>
-          </article>
-          
-
-          <h1 class="title">
-            Daily Goals
-
-          <ul class="steps is-balanced">
-            <li class="steps-segment">
-              <span class="steps-marker"></span>
-              <div class="steps-content">
-                <p class="is-size-4">Day 1</p>
-                <p>Workout Name</p>
-              </div>
-            </li>
-            <li class="steps-segment">
-              <span class="steps-marker"></span>
-              <div class="steps-content">
-                <p class="is-size-4">Day 2</p>
-                <p>Workout Name</p>
-              </div>
-            </li>
-            <li class="steps-segment is-active">
-              <span class="steps-marker"></span>
-              <div class="steps-content">
-                <p class="is-size-4">Day 3</p>
-                <p>Workout Name</p>
-              </div>
-            </li>
-            <li class="steps-segment">
-              <span class="steps-marker"></span>
-              <div class="steps-content">
-                <p class="is-size-4">Day 4</p>
-                <p>Workout Name</p>
-              </div>
-            </li>
-            <li class="steps-segment">
-              <span class="steps-marker"></span>
-              <div class="steps-content">
-                <p class="is-size-4">Day 5</p>
-                <p>Workout Name</p>
-              </div>
-            </li>
-          </ul>
-          
-        
+        <article class="message is-info">
+          <div class="message-header">
+            <p > 
+              <i class="fas fa-cat"></i>
+              Flexablity
+            </p>
+          </div>
+          <div class="message-body">
+            Progress This Week
+            <br> 
+            <progress class="progress is-info" value="15" max="100">15%</progress>
+            <button class="button is-light">More</button> 
+          </div>
+        </article>
 
       </div>
       <script src="https://unpkg.com/vue@next"></script>

@@ -14,8 +14,9 @@
       <!-- NAVBAR START -->
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+              <a class="navbar-item" href="./index.html">
+                <i class="fas fa-dumbbell"></i>
+                &nbsp App Name
               </a>
           
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': navBarIsActive }" @click="navBarIsActive = !navBarIsActive" >
@@ -27,32 +28,62 @@
           
             <div class="navbar-menu" :class="{ 'is-active': navBarIsActive }">
               <div class="navbar-start">
-                <a class="navbar-item">
-                  Home
+                <a class="navbar-item" href="./history.html">
+                  History
                 </a>
           
                 <a class="navbar-item">
-                  Report
+                  New Excerise
                 </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
-                    Types
+                    Reports
                   </a>
           
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsEndurance.html">
                       Endurance
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsStrength.html">
                       Strength
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsBalance.html">
                       Balance
                     </a>
                     
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./reportsFlexablity.html">
                       Flexablity
+                    </a>
+                  </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    Friends
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="./friendsMine.html">
+                      My Friends
+                    </a>
+                    <a class="navbar-item" href="./friendsFind.html">
+                      Find Friends
+                    </a>
+                  </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    Activity
+                  </a>
+          
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="./activityMine.html">
+                      My Activity
+                    </a>
+                    <a class="navbar-item" href="./activityFriends.html">
+                      Friends Activity
                     </a>
                   </div>
                 </div>
@@ -63,10 +94,13 @@
                   </a>
           
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./login.html">
+                      Account
+                    </a>
+                    <a class="navbar-item" href="./helpAbout.html">
                       About
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./helpContact.html">
                       Contact
                     </a>
                   </div>
@@ -90,74 +124,31 @@
           </nav>
           <!-- NAVBAR END -->
 
-        <h1 class="title">
-          Excerise App
-        </h1>
-        <p class="subtitle">
-          Track your fitness
-        </p>
+          <!-- Log In Start-->
+          <div class="columns is-centered">
+          <div class="column is-half">
+            <form class="box">
+                <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="e.g. Username">
+                </div>
+                </div>
+            
+                <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input" type="password" placeholder="********">
+                </div>
+                </div>
+            
+                <button class="button is-primary">Sign in</button>
+            </form>
+          </div>
+          </div>
 
-        <article class="message is-primary">
-          <div class="message-header">
-            <p > 
-              <i class="fas fa-running"></i>
-              Endurance
-            </p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">
-            Progress This Week
-            <br> 
-            <progress class="progress is-primary" value="15" max="100">15%</progress>
-            <button class="button is-light">More</button> 
-          </div>
-        </article>
-
-        <article class="message is-danger">
-          <div class="message-header">
-            <p > 
-              <i class="fas fa-dumbbell"></i>
-              Strength
-            </p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">
-            Progress This Week
-            <br> 
-            <progress class="progress is-danger" value="15" max="100">15%</progress>
-            <button class="button is-light">More</button> 
-          </div>
-        </article>
-
-        <article class="message is-warning">
-          <div class="message-header">
-            <p > 
-              <i class="fas fa-balance-scale"></i>
-              Balance
-            </p>
-          </div>
-          <div class="message-body">
-            Progress This Week
-            <br> 
-            <progress class="progress is-warning" value="15" max="100">15%</progress>
-            <button class="button is-light">More</button> 
-          </div>
-        </article>
-
-        <article class="message is-info">
-          <div class="message-header">
-            <p > 
-              <i class="fas fa-cat"></i>
-              Flexablity
-            </p>
-          </div>
-          <div class="message-body">
-            Progress This Week
-            <br> 
-            <progress class="progress is-info" value="15" max="100">15%</progress>
-            <button class="button is-light">More</button> 
-          </div>
-        </article>
+          <!-- Log In End-->
+      </div>
 
       </div>
       <script src="https://unpkg.com/vue@next"></script>
