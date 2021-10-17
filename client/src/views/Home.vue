@@ -1,25 +1,16 @@
 <template>
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <Nav />
-
-                <router-view/>                 
-            </div>
-        </div>
-       
-    </div>
-
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <h1>This is actually the Home Page</h1>
+  </div>
 </template>
 
-<style lang="scss">
-</style>
-
 <script>
-import Nav from "./components/Nav";
+// @ is an alias to /src
 export default {
-    components: {
-        Nav
-    }
+  name: 'Home',
+  components: {
+    
+  }
 }
 </script>
