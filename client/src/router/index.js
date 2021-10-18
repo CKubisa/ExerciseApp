@@ -7,57 +7,65 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: { requiresLogin: true }
       },
     {
         path: '/about',
         name: 'About',
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+        component: () => import('../views/About.vue')
     },
     {
         path: '/login',
         name: 'Login',
-        component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+        component: () => import('../views/Login.vue')
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+      component: () => import('../views/Contact.vue')
     },
     {
       path: '/history',
       name: 'History',
-      component: () => import(/* webpackChunkName: "about" */ '../views/History.vue')
+      component: () => import('../views/History.vue'),
+      meta: { requiresLogin: true }
     },
     {
       path: '/exercise',
       name: 'Exercise',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Exercise.vue')
+      component: () => import('../views/Exercise.vue'),
+      meta: { requiresLogin: true }
     },
     {
       path: '/report',
       name: 'Report',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Report.vue')
+      component: () => import('../views/Report.vue'),
+      meta: { requiresLogin: true }
     },
     {
       path: '/myfriends',
       name: 'MyFriends',
-      component: () => import(/* webpackChunkName: "about" */ '../views/MyFriends.vue')
+      component: () => import('../views/MyFriends.vue'),
+      meta: { requiresLogin: true }
     },
     {
       path: '/findfriends',
       name: 'FindFriendss',
-      component: () => import(/* webpackChunkName: "about" */ '../views/FindFriends.vue')
+      component: () => import('../views/FindFriends.vue'),
+      meta: { requiresLogin: true }
     },
     {
       path: '/myactivity',
       name: 'MyActivity',
-      component: () => import(/* webpackChunkName: "about" */ '../views/MyActivity.vue')
+      component: () => import('../views/MyActivity.vue'),
+      meta: { requiresLogin: true }
     },
     {
       path: '/friendsactivity',
       name: 'FriendsActivity',
-      component: () => import(/* webpackChunkName: "about" */ '../views/FriendsActivity.vue')
+      component: () => import('../views/FriendsActivity.vue'),
+      meta: { requiresLogin: true }
     },
 ]
 

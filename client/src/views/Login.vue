@@ -1,32 +1,26 @@
 <template>
+<div class="columns is-centered">
+<div class="column is-half">
+<form class="box">
   <form class="section" @submit.prevent="login()">
+      <h1 class="title">
+          Log In
+        </h1>
       <div class="field">
-        <p class="control has-icons-left has-icons-right">
             <input class="input" type="text" placeholder="Email" v-model="email">
-            <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-            </span>
-        </p>
         </div>
         <div class="field">
-        <p class="control has-icons-left">
             <input class="input" type="password" placeholder="Password" v-model="password">
-            <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-            </span>
-        </p>
         </div>
         <div class="field">
-        <p class="control">
             <button class="button is-success">
-            Login
+            Log in
             </button>
-        </p>
         </div>
   </form>
+  </form>
+  </div>
+  </div>
 </template>
 
 <script>

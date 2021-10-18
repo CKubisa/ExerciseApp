@@ -88,6 +88,17 @@
 </template>
 
 <script>
+import LoginBadge from './LoginBadge';
+export default {
+    data(){
+        return {
+            isActive: false
+        }
+    },
+    components: {
+        LoginBadge,
+    }
+}
 </script>
 
 <style>
