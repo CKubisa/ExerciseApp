@@ -1,23 +1,23 @@
 {
-  "name": "ExcersieApp",
+  "name": "2021fall",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch server server/index"
+    "dev": "nodemon --watch server server/index",
+    "start": "node server/index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CKubisa/ExcersieApp.git"
+    "url": "git+https://github.com/jewpaltz/2021Fall.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "bulma-calendar": "^6.1.13",
-    "bulma-o-steps": "^1.1.0",
-    "bulma-slider": "^2.0.4",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
     "express": "4.17.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mongodb": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
