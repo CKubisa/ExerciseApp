@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "bulma": "^0.9.3",
-    "bulma-slider": "^2.0.4",
     "@fortawesome/fontawesome-free": "5.15.4",
+    "@oruga-ui/oruga-next": "^0.4.4",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
@@ -25,9 +25,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "bulma-slider": "^2.0.4",
-    "@fortawesome/fontawesome-free": "5.15.4"
+    "sass-loader": "^8.0.2"
   },
   "eslintConfig": {
     "root": true,
