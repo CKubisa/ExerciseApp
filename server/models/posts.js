@@ -7,45 +7,31 @@ module.exports.collection = collection;
 
 const list = [
     { 
-        src: "https://bulma.io/images/placeholders/1280x960.png",
+        src: "https://business.uoregon.edu/sites/business1.uoregon.edu/files/styles/banner/public/news/Enews-Covid-Gym-Safety-thumb-202101.jpg?itok=kFFfNUfR",
         alt: "Placeholder image",
-        caption: "Lorem Ipsom",
+        caption: "At the gym",
         time: Date(),
         user_handle: "@casskubisa",
         isPublic: true,
     },
     { 
-        src: "https://bulma.io/images/placeholders/1280x960.png",
+        src: "https://image.cnbcfm.com/api/v1/image/105999935-1562097549646sport-stretching-leisure-hobby-woman-strong-exercise-workout-gym-weightlifting_t20_v7r7a7.jpg?v=1594825333&w=1600&h=900",
         alt: "Placeholder image",
-        caption: "casskubisa",
+        caption: "Stretching",
         time: Date(),
-        user_handle: "@vp",
+        user_handle: "@buffgirl",
         isPublic: true,
     },
     { 
-        src: "https://scontent-lga3-2.xx.fbcdn.net/v/t31.18172-8/p720x720/886090_10100137903372610_773365632_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ba80b0&_nc_ohc=DWVdkKM2PwQAX_tAc5p&_nc_ht=scontent-lga3-2.xx&oh=d9d284fef84a57b1a824932d5fd2da20&oe=618A0203",
-        alt: "Purim in SUB #100",
-        caption: "What a purim to remember",
+        src: "https://static01.nyt.com/images/2020/01/06/well/04run-gym/04run-gym-videoSixteenByNineJumbo1600.jpg",
+        alt: "Placeholder image",
+        caption: "weight training",
         time: Date(),
-        user_handle: "@cat",
+        user_handle: "@buffgirl",
         isPublic: true,
     },
-    { 
-        src: "https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/s600x600/244029201_10167312248050347_4050463819121596219_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=oaf-csovSFEAX-I2hxQ&_nc_ht=scontent-lga3-2.xx&oh=8466fcd68032477fab99306ba1a6e800&oe=61895C64",
-        alt: "Mug with slogan",
-        caption: "Never be afraid to try something new. The ark was built by amateurs and the Titanic by professionals",
-        time: Date(),
-        user_handle: "@cat",
-        isPublic: true,
-    },
-    { 
-        src: "https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/p180x540/242759506_10102663165018030_5506732176336636339_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=LJFWaOTJXvUAX-skiU3&_nc_ht=scontent-lga3-2.xx&oh=e6a03799ccf969c3b3fe62a7b266b8b9&oe=618C38F8",
-        alt: "The family",
-        caption: "The whole family. All the kids hiking together. Sukkot Vacation.",
-        time: Date(),
-        user_handle: "@cat",
-        isPublic: true,
-    },
+
+
 ];
 
 const addOwnerPipeline = [
