@@ -29,6 +29,10 @@
         Report
       </router-link>
 
+      <router-link class="navbar-item" to="/Feed" active-class="is-active" exact>
+                      Activity
+      </router-link>
+
       <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
                     Friends
@@ -40,21 +44,6 @@
                     </router-link>
                     <router-link class="navbar-item" to="/findfriends" active-class="is-active" exact>
                       Find Friends
-                    </router-link>
-                  </div>
-      </div>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link">
-                    Activity
-                  </a>
-          
-                  <div class="navbar-dropdown">
-                    <router-link class="navbar-item" to="myactivity" active-class="is-active" exact>
-                      My Activity
-                    </router-link>
-                    <router-link class="navbar-item" to="friendsactivity" active-class="is-active" exact>
-                      Friends Activity
                     </router-link>
                   </div>
       </div>

@@ -56,15 +56,9 @@ const routes = [
       meta: { requiresLogin: true }
     },
     {
-      path: '/myactivity',
-      name: 'MyActivity',
-      component: () => import('../views/MyActivity.vue'),
-      meta: { requiresLogin: true }
-    },
-    {
-      path: '/friendsactivity',
-      name: 'FriendsActivity',
-      component: () => import('../views/FriendsActivity.vue'),
+      path: '/Feed',
+      name: 'Feed',
+      component: () => import('../views/Feed.vue'),
       meta: { requiresLogin: true }
     },
 ]
