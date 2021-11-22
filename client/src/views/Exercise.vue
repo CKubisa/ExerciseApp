@@ -1,78 +1,66 @@
 <template>
-<div class="container">
+  <div class="section">
+      <h1 class="title"> Feed Page </h1>
+      
+      <div class="columns">
 
-          <!-- Start-->
-          <div class="columns is-centered">
-          <div class="column is-two-thirds">
+        <div class="column is-half">
 
-            <h1 class="title">
-                Log Your Exercise
-              </h1>
+            <post-edit :new-post="newPost" @add="add()" />
 
-            <div class="block is-size-1">             
-            </div>
-            <div class="field">
-                <label class="label">Title</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Wokout Name">
-                </div>
-              </div>
-                           
-            <div class="columns">
-            <div class="column is-one-quarter">
-              <div class="field">
-                <label class="label">Types</label>
-                <div class="control">
-                  <div class="select">
-                    <select>
-                      <option>Exercise Type</option>
-                      <option>Endurance</option>
-                      <option>Strength</option>
-                      <option>Balance</option>
-                      <option>Flexablity</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="column is-one-fifth">
-                <label class="label">Length</label>
-                <input class="input" type="text" placeholder="Minutes">
-            </div>
-            
-            </div>
-              
-              
-              <div class="field">
-                <label class="label">Description</label>
-                <div class="control">
-                  <textarea class="textarea" placeholder=""></textarea>
-                </div>
-              </div>
-                          
-              
-              <div class="field is-grouped">
-                <div class="control">
-                  <button class="button is-primary">Submit</button>
-                </div>
-                <div class="control">
-                  <button class="button is-primary is-light">Cancel</button>
-                </div>
-              </div>
-            
-            
-          </div>
-          </div>
-          </div>
+        </div>
+
+        <div class="column">
+            <post :post="newPost" />
+        </div>
+      </div>
+
+
+  </div>
 </template>
 
 <script>
+import Post from '../components/Post.vue';
+import session from "../services/session";
+import { Add, Delete, GetFeed } from "../services/posts";
+import PostEdit from "../components/Post-edit.vue";
+const newPost = ()=> ({ user: session.user, user_handle: session.user.handle })
 export default {
-
+    components: {
+        Post,
+        PostEdit
+    },
+    data: ()=> ({
+        posts: [],
+        newPost: newPost()
+    }),
+    async mounted(){
+        this.posts = await GetFeed(session.user.handle)
+    },
+    methods: {
+        async remove(post, i){
+            console.log({post})
+            const response = await Delete(post._id)
+            if(response.deleted){
+                this.posts.splice(i, 1)
+            }
+        },
+        async add(){
+            console.log("Adding new post at " + new Date())
+            const response = await Add(this.newPost);
+            console.log({ response });
+            if(response){
+                this.posts.unshift(response);
+                this.newPost = newPost();
+            }
+        }
+    }
 }
 </script>
 
 <style>
-
+    .card {
+        margin-bottom: 10px;
+    }
 </style>

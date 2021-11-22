@@ -26,11 +26,6 @@
       {{post.caption}}
     </div>
   </div>
-    <footer class="card-footer">
-        <a href="#" class="card-footer-item">Save</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-  </footer>
 </div>
 </template>
 
@@ -38,16 +33,6 @@
 export default {
     props: {
         post: Object
-    },
-    computed: {
-        prettyDate(){
-            if(this.post.time && this.post.time.toDateString){
-                return this.post.time.toDateString()
-            }else{
-                return 'Never'
-            }
-            
-        }
     }
 }
 </script>
