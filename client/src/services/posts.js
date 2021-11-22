@@ -16,9 +16,8 @@ export function GetFeed(handle) {
 
 
 export function Get(post_id) { return api('posts/' + post_id); }
-
 export function Add(post) {
-     return api('posts', post);
+     return { ...post };
 }
 export function Update(post_id, post) {
     return { post_id, post};
