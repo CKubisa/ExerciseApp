@@ -33,21 +33,13 @@
                       Activity
       </router-link>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link">
-                    Friends
-                  </a>
-          
-                  <div class="navbar-dropdown">
-                    <router-link class="navbar-item" to="/myfriends" active-class="is-active" exact>
-                      My Friends
-                    </router-link>
-                    <router-link class="navbar-item" to="/findfriends" active-class="is-active" exact>
-                      Find Friends
-                    </router-link>
-                  </div>
-      </div>
+      <router-link class="navbar-item" to="/Profile" active-class="is-active" exact>
+                      Profile
+      </router-link>
 
+      <router-link class="navbar-item" to="/findfriends" active-class="is-active" exact>
+                      Find Friends
+      </router-link>
 
       <div class="navbar-item has-dropdown is-hoverable" >
         <a class="navbar-link" >
