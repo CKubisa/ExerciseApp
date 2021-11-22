@@ -7,19 +7,6 @@ module.exports.collection = collection;
 
 const list = [
     { 
-        firstName: 'Moshe',
-        lastName: 'Plotkin',
-        handle: '@JewPaltz',
-        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMo3I5GL9_Zd_LULXRIXTzRLlVESBnoGp8sw&usqp=CAU',
-        password: 'me',
-        isAdmin: true,
-        emails: [
-            "plotkinm@newpaltz.edu"
-        ],
-        following: [ { handle: '@vp', isApproved: true }, { handle: '@buffgirl', isApproved: true }, { handle: '@cat', isApproved: true }, { handle: '@casskubisa', isApproved: true } ],
-        get name(){ return this.firstName + ' ' + this.lastName },
-    },
-    { 
         firstName: 'Buff',
         lastName: 'Girl',
         handle: '@buffgirl',
