@@ -1,109 +1,51 @@
 <template>
-<div class="container">
+    <div class="about">
+        <h1 class="title">Find Friends</h1>
 
-          <h1 class="title">
-            <i class="fas fa-user-plus"></i>
-            Add Friends
-          </h1>
+        <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Handle</th>
+                    <th>Profile Pic</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
 
-          <div class="block is-size-4">
-            Search
-            <input class="input" type="text" placeholder="Find People">
-          </div>
-
-          <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-48x48">
-                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <p class="title is-4">John Smith</p>
-                          <p class="subtitle is-6">@johnsmith</p>
-                        </div>
-                      </div>                 
-                      <div class="content">
-                        Descrption
-                      </div>
-                      <button class="button is-info">Add Friend</button>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-48x48">
-                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <p class="title is-4">John Smith</p>
-                          <p class="subtitle is-6">@johnsmith</p>
-                        </div>
-                      </div>                 
-                      <div class="content">
-                        Descrption
-                      </div>
-                      <button class="button is-info">Add Friend</button>
-                    </div>
-                  </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-48x48">
-                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <p class="title is-4">John Smith</p>
-                          <p class="subtitle is-6">@johnsmith</p>
-                        </div>
-                      </div>                 
-                      <div class="content">
-                        Descrption
-                      </div>
-                      <button class="button is-info">Add Friend</button>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-48x48">
-                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <p class="title is-4">John Smith</p>
-                          <p class="subtitle is-6">@johnsmith</p>
-                        </div>
-                      </div>                 
-                      <div class="content">
-                        Descrption
-                      </div>
-                      <button class="button is-info">Add Friend</button>
-                    </div>
-                  </div>
-            </div>
-            </div>
-            </div> 
+            <tbody>
+                <tr v-for="u in list" :key="u.handle">
+                    <th>{{ u.firstName }}</th>
+                    <th>{{ u.lastName }}</th>
+                    <td>{{ u.handle }}</td>
+                    <td>
+                        <img :src="u.pic" width="50" :alt="u.handle" />
+                    </td>
+                    <td>
+                        <p class="buttons">
+                            <button class="button">
+                                <span class="icon is-small">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </button>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
-<script>
+<script>import {  GetAll } from "../services/users"
 export default {
-
+    data() {
+        return {
+            list: []
+        }
+    },
+    async mounted(){
+        this.list = await GetAll();
+    }
 }
 </script>
-
-<style>
-
-</style>
