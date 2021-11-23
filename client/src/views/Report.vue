@@ -1,47 +1,80 @@
 <template>
-  <div class="section">
-      <h1 class="title"> Activity </h1>
-      
-      <div class="columns">
-        <div class="column is-one-third is-offset-one-third">
-            
-            <div class="post" v-for=" (p, i) in posts" :key="p.src">
-                <post :post="p" @remove="remove(p, i)" />
-            </div>
+<div class="container">
 
+    <h1 class="title">
+          <i class="fas fa-running"></i>
+          Report
+    </h1>
 
-        </div>
-      </div>
+    <article class="message is-warning">
+          <div class="message-header">
+            <p>
+                Type: Endurance
+                <br>
+                Name: Yoga
+                <br>
+                Length: 25 Minutes
+            </p>
+          </div>
+          <div class="message-body">
+            Description
+          </div>
+    </article>
 
+    <article class="message is-danger">
+          <div class="message-header">
+            <p>
+                Type: Stength
+                <br>
+                Name: Sit Ups
+                <br>
+                Length: 5 Minutes
+            </p>
+          </div>
+          <div class="message-body">
+            Description
+          </div>
+    </article>
 
-  </div>
+    <article class="message is-info">
+          <div class="message-header">
+            <p>
+                Type: Flexabilty
+                <br>
+                Name: Stretching
+                <br>
+                Length: 12 Minutes
+            </p>
+          </div>
+          <div class="message-body">
+            Description
+          </div>
+    </article>
+
+    <article class="message is-info">
+          <div class="message-header">
+            <p>
+                Type: Endurance
+                <br>
+                Name: Running
+                <br>
+                Length: 40 Minutes
+            </p>
+          </div>
+          <div class="message-body">
+            Description
+          </div>
+    </article>
+
+</div>
 </template>
 
 <script>
-import Post from '../components/Post.vue';
-import session from "../services/session";
-import { Delete, GetWall } from "../services/posts";
 export default {
-    components: {
-        Post
-    },
-    data: ()=> ({
-        posts: []
-    }),
-    async mounted(){
-        this.posts = await GetWall(session.user.handle)
-    },
-    methods: {
-        async remove(post, i){
-            console.log({post})
-            const response = await Delete(post.id)
-            if(response.deleted){
-                this.posts.splice(i, 1)
-            }
-        }
-    }
+
 }
 </script>
 
 <style>
+
 </style>
