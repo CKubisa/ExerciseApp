@@ -61,13 +61,6 @@ const routes = [
       component: () => import('../views/Feed.vue'),
       meta: { requiresLogin: true }
     },
-
-    {
-      path: '/Profile',
-      name: 'Profile',
-      component: () => import('../views/Profile.vue'),
-      meta: { requiresLogin: true }
-    },
 ]
 
 const router = createRouter({
