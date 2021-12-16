@@ -33,10 +33,6 @@
                       Activity
       </router-link>
 
-      <router-link class="navbar-item" to="/Profile" active-class="is-active" exact>
-                      Profile
-      </router-link>
-
       <router-link class="navbar-item" to="/findfriends" active-class="is-active" exact>
                       Find Friends
       </router-link>

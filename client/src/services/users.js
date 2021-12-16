@@ -25,19 +25,6 @@ const list = [
         ],
         following: [ { handle: '@casskubisa', isApproved: true }, ],
     },
-    { 
-        firstName: 'Buff',
-        lastName: 'Girl',
-        handle: '@buffgirl',
-        pic: 'https://thumbs.dreamstime.com/z/smiling-strong-woman-black-sportswear-fitness-girl-131652010.jpg',
-        password: 'power',
-        isAdmin: true,
-        emails: [
-            "john@smith.com"
-        ],
-        following: [ { handle: '@vp', isApproved: true }, { handle: '@buffgirl', isApproved: true }, { handle: '@cat', isApproved: true }, { handle: '@casskubisa', isApproved: true } ],
-        get name(){ return this.firstName + ' ' + this.lastName },
-    }
 
 ];
 
