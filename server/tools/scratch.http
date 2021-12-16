@@ -63,3 +63,6 @@ DELETE  http://localhost:3100/posts/618cac0f347b76cc068f980e
 ###
 POST http://localhost:3100/posts/seed
 
+###
+http://localhost:3100/posts/search?@casskubisa
+

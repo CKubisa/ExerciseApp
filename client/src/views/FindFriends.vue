@@ -1,31 +1,36 @@
 <template>
+
   <section>
     <p class="content"><b>Selected:</b> {{ selected }}</p>
     <o-field label="Find a JS framework">
-      <o-autocomplete rounded expanded v-model="name" :data="filteredDataArray" placeholder="e.g. jQuery" icon="search" clearable @select="option => selected = option">
+      <o-autocomplete rounded expanded v-model ="handle" :list="filteredDataArray" placeholder="e.g. jQuery" icon="search" clearable @select="option => selected = option">
         <template v-slot:empty>No results found</template>
       </o-autocomplete>
     </o-field>
   </section>
+  
 </template>
 
-<script>
+<script>import { Search } from "../services/posts"
   export default {
     data() {
       return {
-        data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
-        name: '',
+        list: [],
+        handle: '',
         selected: null
       }
     },
+    async mounted(){
+        this.list = await Search();
+    },
     computed: {
       filteredDataArray() {
-        return this.data.filter(option => {
+        return this.list.filter(option => {
           return (
             option
               .toString()
               .toLowerCase()
-              .indexOf(this.name.toLowerCase()) >= 0
+              .indexOf(this.handle.toLowerCase()) >= 0
           )
         })
       }

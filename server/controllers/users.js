@@ -18,6 +18,11 @@ app
             })
             .catch(next) 
     })
+    .get("/search", (req, res, next) =>{
+        model   .Search(req.query.q)
+                .then( x=> res.send(x) )
+                .catch(next)    
+    })
     .patch("/:user_id", (req, res, next) =>{
 
         model   .Update(req.params.user_id, req.body)
